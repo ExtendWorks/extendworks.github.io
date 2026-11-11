@@ -1,0 +1,83 @@
+@font-face { font-family: "Inter"; font-weight: 400; font-display: swap; src: url("fonts/inter-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 600; font-display: swap; src: url("fonts/inter-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 800; font-display: swap; src: url("fonts/inter-latin-800-normal.woff2") format("woff2"); }
+
+:root {
+  --bg: #FFF8DC;
+  --card: #FFFFFF;
+  --ink: #18181B;
+  --muted: #52525B;
+  --blue: #2563EB;
+  --line: #E4E4E7;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: linear-gradient(160deg, #FEF3C7 0%, var(--bg) 40%, #FFFFFF 100%) fixed;
+  color: var(--ink);
+  font: 400 18px/1.6 Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 40px 16px 72px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 28px;
+}
+.brand img { border-radius: 10px; }
+
+/* Only the section that matches body[data-mode] is shown. */
+.mode { display: none; }
+body[data-mode="pin"] .mode-pin,
+body[data-mode="usage"] .mode-usage { display: block; }
+
+.mode {
+  background: var(--card);
+  border-radius: 24px;
+  padding: clamp(24px, 5vw, 48px);
+  box-shadow: 0 1px 2px rgba(24, 24, 27, .06), 0 12px 40px rgba(120, 53, 15, .10);
+}
+
+h1 {
+  margin: 0;
+  font-weight: 800;
+  font-size: clamp(30px, 5vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+.lead { margin: 12px 0 0; font-size: 20px; color: var(--muted); }
+
+.steps { margin: 28px 0 0; padding-left: 1.4em; }
+.steps > li { margin: 0 0 28px; padding-left: 4px; }
+.steps > li::marker { font-weight: 800; color: var(--blue); }
+.steps p { margin: 0 0 12px; }
+.steps-inline > li { margin-bottom: 8px; }
+
+.shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin-top: 8px;
+}
+.mode-pin .shot { margin-top: 24px; }
+
+.switch {
+  margin: 32px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 16px;
+}
+.switch a { color: var(--blue); font-weight: 600; }
+a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 4px; }
