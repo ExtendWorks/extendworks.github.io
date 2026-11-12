@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg?v=2">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png?v=2">
+  <link rel="icon" href="favicon.ico?v=2" sizes="any">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=2">
+  <title>Welcome to Text Replacer</title>
+  <meta name="description" content="Text Replacer is installed. Pin it to your toolbar and start replacing text on any website.">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- Default is "pin": without JS the user still gets the pin guide. -->
+<body data-mode="pin">
+  <main class="page">
+    <header class="brand">
+      <img src="img/logo.svg?v=2" width="40" height="40" alt="">
+      <span>Text Replacer</span>
+    </header>
+
+    <!-- Mode 1: the extension is hidden in the puzzle menu -->
+    <section class="mode mode-pin" aria-labelledby="pin-title">
+      <h1 id="pin-title">Text Replacer is installed</h1>
+      <ul class="marks">
+        <li><span class="num">1</span>Click the puzzle icon in the top-right corner.</li>
+        <li><span class="num">2</span>Click the pin next to Text Replacer.</li>
+      </ul>
+      <img class="shot" src="img/pin-steps.png?v=2" alt="The puzzle icon (1) opens the Extensions menu. The pin (2) next to Text Replacer keeps it on the toolbar.">
+      <ul class="marks">
+        <li><span class="num">3</span>Click the Text Replacer icon to start.</li>
+      </ul>
+      <img class="shot" src="img/open-extension.png?v=2" alt="The Text Replacer icon (3) on the Chrome toolbar.">
+      <p class="switch">Already pinned?
+        <a href="#usage" data-switch="usage">See how to use it</a></p>
+    </section>
+
+    <!-- Mode 2: the extension is already on the toolbar -->
+    <section class="mode mode-usage" aria-labelledby="usage-title">
+      <h1 id="usage-title">Text Replacer is ready</h1>
+      <p class="lead">Click the icon to open it. The badge counts replaced words.</p>
+      <img class="shot" src="img/toolbar-click.png?v=2" alt="The Text Replacer icon on the Chrome toolbar with the badge 10.">
+
+      <div class="step">
+        <h2><span class="num">1</span>Replace words on any site</h2>
+        <p>Enter a word and its replacement, then click <b>Add pair</b>.</p>
+        <img class="shot" src="img/page-replaced.png?v=2" alt="A page where cat is replaced with dog. The popup lists three pairs.">
+      </div>
+      <div class="step">
+        <h2><span class="num">2</span>Use the right-click menu</h2>
+        <p>Select a word, right-click it and choose <b>Replace "…"</b>.</p>
+        <img class="shot" src="img/right-click.png?v=2" alt="The right-click menu with the Replace &quot;cat&quot; item.">
+      </div>
+      <div class="step">
+        <h2><span class="num">3</span>Pause, sync and back up</h2>
+        <p>Use the top switch to pause it on this site. Sync and export your pairs in Settings.</p>
+        <img class="shot" src="img/settings.png?v=2" alt="Text Replacer Settings: pause switch, sync, export and import.">
+      </div>
+      <p class="switch">No icon on your toolbar?
+        <a href="#pin" data-switch="pin">Show how to pin it</a></p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
