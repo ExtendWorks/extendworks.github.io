@@ -6,7 +6,7 @@
 
   // TODO: replace with the Chrome Web Store item ID once the item is created in CWS (lesson 3.6).
   // Until then the page uses the ID passed in the link (?id=...), which works for developer-mode installs.
-  var STORE_EXTENSION_ID = "REPLACE_WITH_CWS_ITEM_ID";
+  var STORE_EXTENSION_ID = "fmdagbieihjocpaahffncjhnihifoebo";
   var POLL_INTERVAL_MS = 1500;
 
   var params = new URLSearchParams(location.search);
